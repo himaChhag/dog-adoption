@@ -72,7 +72,7 @@ const DogList: React.FC = () => {
 
   const handleSortChange = (value: string) => {
     setSortBy(value);
-    setFilters({ ...filters, sort: `${value}:asc` }); // Reset to ascending on sort change
+    setFilters({ ...filters, sort: `${value}:asc` }); 
   };
 
   return (

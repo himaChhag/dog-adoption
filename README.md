@@ -20,8 +20,8 @@ Before you begin, ensure you have the following installed:
 
     If you are working with a Git repository, clone it to your local machine using GitHub CLI:
 
-    ```
-    gh repo clone himaChhag/dog-adoption
+   ```bash
+    git clone [https://github.com/himaChhag/dog-adoption.git](https://github.com/himaChhag/dog-adoption.git)
     cd fetch-dog-adoption
     ```
 

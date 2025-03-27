@@ -17,7 +17,6 @@ export const login = async (name, email) => {
     throw new Error(`Login failed: ${response.statusText}`);
   }
 
-  // const data = await response.json();
   return response;
 };
 
