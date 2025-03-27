@@ -2,17 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -28,11 +17,247 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: 3px solid #ffbf47; /* Custom focus outline */
+}
+
+/* DogList Component Styling */
+.dog-list-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.toggle-container {
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start; /* Align to the left */
+  padding-left: 20px;
+}
+
+.toggle-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: #45a049;
+}
+
+h1 {
+  text-align: center;
+}
+
+.filters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.breed-select {
+  padding: 8px 15px;
+  width: 250px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sort-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sort-toggle button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.sort-toggle button:hover {
+  background-color: #0056b3;
+}
+
+.dog-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax */
+  gap: 50px; /* Reduced gap */
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px; /* Optional: limit maximum width */
+  margin: 0 auto; /* Center horizontally */
+  justify-content: center; /* Center content within the grid */
+}
+
+.dog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Initial responsive columns */
+  grid-auto-rows: min-content;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1400px; /* Adjust max-width as needed */
+  margin: 0 auto;
+  justify-content: center;
+}
+
+
+.dog-card {
+  display: flex;
+  align-items: flex-start; /* Align items to the top to prevent stretching */
+  flex-direction: column; /*Stack items vertically*/
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  width: 100%;
+  margin: 10px;
+}
+
+.dog-image {
+  width: 100%;
+  height: auto;
+}
+
+.dog-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Or 'cover' */
+}
+
+.dog-details {
+  width:100%;
+}
+
+.dog-details h3, .dog-details p, .dog-details button{
+  width: 100%;
+}
+
+.dog-card:hover {
+  transform: scale(1.05);
+}
+
+.dog-card:hover {
+  transform: scale(1.05);
+}
+
+.dog-image {
+  flex: 0 0 200px; /* Set a fixed width for the image container */
+  height: 200px;   /* Set the height of the image container */
+  overflow: hidden; /* Hide any overflow */
+  border-radius: 8px; /* Optional: rounded corners for the image container */
+}
+
+.dog-image img {
+  width: 100%;         /* Make the image take up the full width of the container */
+  height: 100%;        /* Make the image take up the full height of the container */
+  object-fit: cover;   /* Ensure the image covers the area without distortion */
+}
+
+.dog-details {
+  flex: 1;  /* Take the remaining space */
+}
+
+.dog-details h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.dog-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.dog-details button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.dog-details button:hover {
+  background-color: #45a049;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.pagination button {
+  background-color: #007BFF;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background-color: #0056b3;
+}
+
+select {
+  padding: 8px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  appearance: none; /* Remove default browser styling */
+  background-color: white; /* Ensure consistent background */
+  cursor: pointer; /* Indicate it's clickable */
+  margin-right: 20px;
+}
+
+select:focus {
+  outline: 2px solid #007bff; /* Add a focus outline */
+}
+
+select option {
+  padding: 8px 15px; /* Consistent padding for options */
+}
+
+select option:disabled {
+  color: #aaa; /* Gray out disabled option */
+  cursor: not-allowed; /* Indicate it's not clickable */
 }

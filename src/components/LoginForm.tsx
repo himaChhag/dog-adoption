@@ -1,8 +1,8 @@
 import React, { useState, FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
-import { login } from "../api"; 
 
-interface LoginFormProps {}
+import { login } from "../api.ts"; 
+import { LoginFormProps } from "../types.ts";
 
 const LoginForm: React.FC<LoginFormProps> = () => {
   const [name, setName] = useState<string>("");
